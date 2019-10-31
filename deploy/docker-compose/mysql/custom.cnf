@@ -1,0 +1,17 @@
+[mysqld]
+default_storage_engine=innodb
+skip_external_locking
+lower_case_table_names=1
+skip_host_cache
+skip_name_resolve
+enforce-gtid-consistency =true
+group_concat_max_len = 204800
+character-set-server = utf8
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+max_connections = 1000
+max_connect_errors = 100000
+table_open_cache_instances = 64
+thread_cache_size = 51                   
+slow_query_log = 1
+slow_query_log_file = /var/lib/mysql/slow.log
+long_query_time = 5

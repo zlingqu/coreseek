@@ -1,0 +1,20 @@
+bsd_getopt.lo: utils/bsd_getopt.c /usr/include/stdc-predef.h \
+ utils/bsd_getopt.h /usr/include/sys/cdefs.h /usr/include/features.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/wordsize.h /usr/include/getopt.h
+
+/usr/include/stdc-predef.h:
+
+utils/bsd_getopt.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/features.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/getopt.h:

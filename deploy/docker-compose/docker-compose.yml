@@ -1,0 +1,39 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:5.7.27 
+    container_name: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: root
+      TZ: Asia/Shanghai
+    volumes:
+      - /data/mysql:/var/lib/mysql
+      - /data/docker-compose/mysql:/etc/mysql/conf.d
+  coreseek:
+    image: coreseek:latest
+    #image: registry.cn-hangzhou.aliyuncs.com/ror/coreseek:latest
+    #image: liwl1iwl/coreseek:3.2.14
+    container_name: coreseek
+    restart: always
+    ports: 
+      - 9312:9312
+    volumes:
+      - /data/docker-compose/sphinx:/usr/local/etc/sphinx
+      - /var/sphinx/data:/data/sphinx
+    depends_on:
+      - mysql
+  busybox:
+    image: busybox
+    container_name: busybox
+    depends_on:
+      - mysql
+      - coreseek
+    command:
+      - /bin/sh
+      - -c
+      - |
+        sleep 3600
