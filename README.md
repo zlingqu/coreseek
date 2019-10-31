@@ -1,4 +1,4 @@
-部分内容来自于[这里](https://github.com/huijiewei/CoreseekDocker)
+部分内容来自于[这里](https://github.com/sunfjun/Dockfile-Coreseek)
 
 
 # 一、 制作image
