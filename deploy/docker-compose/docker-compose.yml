@@ -23,7 +23,7 @@ services:
       - 9312:9312
     volumes:
       - /data/docker-compose/sphinx:/usr/local/etc/sphinx
-      - /var/sphinx/data:/data/sphinx
+      - /data/sphinx:/var/sphinx/data
     depends_on:
       - mysql
   busybox:
